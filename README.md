@@ -23,7 +23,7 @@ npm i pg
 
 **Install most recent versions of TypeScript and TS-Node**
 
-- The default versions of TypeScript and TS-Node are outdated, run this script to update them.
+- The default versions of TypeScript and TS-Node that come out of the box with TypeORM are outdated, run the script below to update them.
 - The `-D` flag installs them as Dev Dependencies.
 
 ```
