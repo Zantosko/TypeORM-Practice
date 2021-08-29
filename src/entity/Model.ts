@@ -8,6 +8,7 @@ import {
 } from 'typeorm';
 import { v4 as uuid } from 'uuid';
 
+// The other models will inherit all schema that exist in this class.
 export default abstract class Model extends BaseEntity {
 	@PrimaryGeneratedColumn()
 	id: number;
@@ -26,11 +27,13 @@ export default abstract class Model extends BaseEntity {
 		this.uuid = uuid();
 	}
 
+	// This is a generic that allows other classes to inherit from it.
 	constructor(model?: Partial<any>) {
 		super();
 		Object.assign(this, model);
 	}
 
+	// Removes id from json response.
 	toJSON() {
 		return { ...this, id: undefined };
 	}

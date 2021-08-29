@@ -109,7 +109,7 @@ npm i
 }
 ```
 
-## Migrations
+## Migration Commands
 
 **Generate Migrations**
 
@@ -133,4 +133,34 @@ npm run typeorm migration:revert
 
 ```
 npm run typeorm migration:show
+```
+
+## Schema Commands
+
+**Drop Schema**
+
+```
+npm run typeorm schema:drop
+```
+
+**Synchronize Schema**
+
+```
+npm run typeorm schema:sync
+```
+
+## Other Packages to Install
+
+- Install Class Validator to set conditions on your table schema.
+
+```
+npm i class-validator
+```
+
+## Compile TS files to JS for production
+
+- Set up a `"build"` script for in package.json file to compile the your TypeScript into JavaScript
+
+```
+"build": "tsc"
 ```
