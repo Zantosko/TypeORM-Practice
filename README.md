@@ -21,7 +21,22 @@ npm un mysql
 npm i pg
 ```
 
-## ormconfig.json file
+**Install most recent versions of TypeScript and TS-Node**
+
+- The default versions of TypeScript and TS-Node are outdated, run this script to update them.
+- The `-D` flag installs them as Dev Dependencies.
+
+```
+npm i -D typescript@latest ts-node@latest
+```
+
+**Install the rest of the necessary packages**
+
+```
+npm i
+```
+
+## Setup for ormconfig.json file
 
 ```
 {
@@ -43,6 +58,55 @@ npm i pg
 	}
 }
 
+```
+
+## Setup for tsconfig.json file
+
+```
+{
+	"compilerOptions": {
+		"lib": ["es5", "es6", "ES2018"],
+		"target": "es5",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"outDir": "./build",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"sourceMap": true,
+		"esModuleInterop": true
+	}
+}
+```
+
+## Setup for package.json file
+
+```
+{
+	"name": "new-typeorm-project",
+	"version": "0.0.1",
+	"description": "Awesome project developed with TypeORM.",
+	"devDependencies": {
+		"@types/express": "^4.17.13",
+		"@types/node": "^8.0.29",
+		"@types/uuid": "^8.3.1",
+		"ts-node": "^10.2.1",
+		"typescript": "^4.4.2"
+	},
+	"dependencies": {
+		"class-validator": "^0.13.1",
+		"express": "^4.17.1",
+		"pg": "^8.7.1",
+		"reflect-metadata": "^0.1.10",
+		"typeorm": "0.2.37",
+		"uuid": "^8.3.2"
+	},
+	"scripts": {
+		"start": "ts-node src/index.ts",
+		"typeorm": "ts-node ./node_modules/typeorm/cli.js",
+		"dev": "nodemon --exec ts-node src/index.ts",
+		"build": "tsc"
+	}
+}
 ```
 
 ## Migrations
@@ -70,11 +134,3 @@ npm run typeorm migration:revert
 ```
 npm run typeorm migration:show
 ```
-
-## Awesome Project Build with TypeORM
-
-Steps to run this project:
-
-1. Run `npm i` command
-2. Setup database settings inside `ormconfig.json` file
-3. Run `npm start` command
