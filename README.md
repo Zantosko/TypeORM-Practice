@@ -111,7 +111,7 @@ npm i
 
 ## Migration Commands
 
-**Generate Migrations**
+**Generate New Migration**
 
 ```
 npm run typeorm migration:generate -- -n <mirgration name>
@@ -123,7 +123,7 @@ npm run typeorm migration:generate -- -n <mirgration name>
 npm run typeorm migration:run
 ```
 
-**Undo Migrations**
+**Undo Previous Migration**
 
 ```
 npm run typeorm migration:revert
