@@ -45,7 +45,7 @@ npm i
 	"port": 5432,
 	"username": "<postgres username>",
 	"password": "<postgres password>",
-	"database": "typeorm_tutorial",
+	"database": "<database name>",
 	"synchronize": false, (set to true if you want auto migrations)
 	"logging": true,
 	"entities": ["src/entity/**/*.ts", "./entity/**/*.js"],
