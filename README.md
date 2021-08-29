@@ -1,4 +1,4 @@
-# Into to TypeORM
+# Into to TypeORM (with PostgreSQL)
 
 ## Setting up TypeORM
 
