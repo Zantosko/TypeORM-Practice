@@ -28,8 +28,8 @@ npm i pg
 	"type": "postgres",
 	"host": "localhost",
 	"port": 5432,
-	"username": "zantosko",
-	"password": "root",
+	"username": "<postgres username>",
+	"password": "<postgres password>",
 	"database": "typeorm_tutorial",
 	"synchronize": false, (set to true if you want auto migrations)
 	"logging": true,
